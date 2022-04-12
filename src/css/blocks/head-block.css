@@ -1,0 +1,4 @@
+.head-block {
+  display: flex;
+  justify-content: space-between;
+}
