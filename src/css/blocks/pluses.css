@@ -12,6 +12,22 @@
   gap: 10px;
 }
 
+.pluses__plus:nth-child(1) {
+  order: 1;
+}
+.pluses__plus:nth-child(2) {
+  order: 2;
+}
+.pluses__plus:nth-child(3) {
+  order: 3;
+}
+.pluses__plus:nth-child(4) {
+  order: 4;
+}
+.pluses__plus:nth-child(5) {
+  order: 5;
+}
+
 .plus {
   display: flex;
   flex-direction: row;
@@ -27,18 +43,18 @@
 .plus--right, .plus--left {
   align-items: start;
   flex-direction: column;
-  width: 34%;
-  max-width: 155px;
-  padding: 36px 17px 20px 20px;
+  width: 100px;
+  padding: 36px 15px 20px 20px;
   gap: 4px;
+  background: transparent url("../../images/side-pluses.svg") no-repeat;
 }
 
 .plus--left {
-  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+  background-position-x: 0;
 }
 
 .plus--right {
-  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+  background-position-x: -135px;
 }
 
 .plus__icon {
@@ -71,26 +87,21 @@
 
 
 @media (min-width: 568px) {
-  .plus--right, .plus--left {
-    width: 16%;
-    padding-top: 55px;
-  }
-
-  .plus:nth-child(3) {
+  .pluses__plus:nth-child(3) {
     align-items: start;
     height: fit-content;
-    width: 33%;
+    width: calc(100% - 270px - 30px - 20px);
+    max-width: 50%;
     flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
     gap: 4px;
-    order: 2 !important;
+    order: 2 ;
   }
 
-  .plus:nth-child(2) {
-    order: 3 !important;
-  }
-
-  .pluses__inner {
-    gap: 15px;
+  .pluses__plus:nth-child(2) {
+    order: 3 ;
   }
 
   .pluses {
@@ -107,44 +118,62 @@
 }
 
 @media (min-width: 992px) {
-  .plus:nth-child(4) {
-    order: 3 !important;
+  .pluses__plus:nth-child(4) {
+    order: 3 ;
   }
 
-  .plus:nth-child(2) {
-    order: 4 !important;
+  .pluses__plus:nth-child(2) {
+    order: 4 ;
   }
 
-  .plus:nth-child(3), .plus:nth-child(4) {
+  .pluses__plus:nth-child(3), .pluses__plus:nth-child(4) {
+    max-width: unset;
     align-items: start;
     height: fit-content;
-    width: 20%;
+    width: calc((100% - 270px - 30px) / 2 - 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
     flex-direction: column;
     gap: 4px;
   }
 }
 
 @media (min-width: 1200px) {
-  .plus:nth-child(3) {
-    width: 192px;
-    order: 2 !important;
+  .plus--right, .plus--left {
+    background: transparent url("../../images/side-pluses-landscape.svg") no-repeat;
+    width: 115px;
+    padding-right: 20px;
   }
 
-  .plus:nth-child(4) {
-    order: 3 !important;
+  .plus--left {
+    background-position-x: 0;
+  }
+
+  .plus--right {
+    background-position-x: -155px;
+  }
+
+  .pluses__plus:nth-child(3) {
+    width: 192px;
+    order: 2 ;
+  }
+
+  .pluses__plus:nth-child(4) {
+    order: 3 ;
     width: 204px;
   }
 
-  .plus:nth-child(5) {
-    order: 4 !important;
+  .pluses__plus:nth-child(5) {
+    order: 4 ;
     width: 230px;
   }
 
-  .plus:nth-child(2) {
-    order: 5 !important;
+  .pluses__plus:nth-child(2) {
+    order: 5 ;
   }
 
-  .plus:nth-child(3), .plus:nth-child(4), .plus:nth-child(5) {
+  .pluses__plus:nth-child(3), .pluses__plus:nth-child(4), .pluses__plus:nth-child(5) {
     padding: 20px;
     align-items: start;
     height: fit-content;
@@ -153,7 +182,6 @@
   }
 
   .plus--right, .plus--left {
-    width: 10%;
     padding-top: 45px;
     gap: 5px;
   }

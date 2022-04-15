@@ -32,6 +32,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  order: 1;
 }
 
 .logo-link__text {
@@ -39,6 +40,10 @@
   color: var(--gray-text-color);
   line-height: 140%;
   font-size: 14px;
+}
+
+.header__email {
+  order: 2;
 }
 
 .email {
@@ -56,6 +61,10 @@
 
 .logo {
   height: 32px;
+}
+
+.header__socials {
+  order: 3;
 }
 
 .socials {
@@ -93,6 +102,10 @@
   background-position-y: -60px;
 }
 
+.header__phone-block {
+  order: 5;
+}
+
 .phone-block {
   display: flex;
   align-items: center;
@@ -127,6 +140,10 @@
 .phone-text__time {
   display: none;
   font-size: 14px;
+}
+
+.header__menu-btn {
+  order: 4;
 }
 
 .landing {
@@ -174,7 +191,7 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background: #ffffff80;
+  background: #FFFFFFCB;
   box-shadow: 0 4px 20px #0000001E;
   backdrop-filter: blur(20px);
   padding: 20px 0;
@@ -221,10 +238,13 @@
 }
 
 @media (min-width: 768px) {
+  .header__phone-block {
+    order: 4;
+  }
+
   .phone-block {
     width: auto;
     flex-direction: row-reverse;
-    order: 4 !important;
   }
 
   .phone-text {
@@ -240,8 +260,8 @@
     display: block;
   }
 
-  .menu-btb {
-    order: 5 !important;
+  .header__menu-btn {
+    order: 5;
   }
 
   .socials {

@@ -67,7 +67,7 @@ b {
   color: #FEFEFE;
 }
 
-.menu-btb {
+.menu-btn {
   height: 40px;
   width: 40px;
   background: #ffffff50 url("../images/burger-btn.svg") no-repeat center;
@@ -77,8 +77,12 @@ b {
   box-shadow: 0 4px 10px #00000010;
 }
 
-.menu-btb:hover {
+.menu-btn:hover {
   box-shadow: 0 4px 10px #c6c6c6;
+}
+
+a, label {
+  user-select: none;
 }
 
 @media (min-width: 414px) {
@@ -133,7 +137,7 @@ b {
     max-width: 1170px;
   }
 
-  .menu-btb {
+  .menu-btn {
     height: 50px;
     width: 50px;
   }
