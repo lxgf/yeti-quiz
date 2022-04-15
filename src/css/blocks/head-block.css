@@ -1,4 +1,408 @@
 .head-block {
+  position: relative;
   display: flex;
+  width: 100%;
+  gap: 40px;
+  flex-direction: column;
+  background: #ccc url("../../images/mountains.jpg");
+  background-position-x: 55%;
+}
+
+.foreground {
+  pointer-events: none;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: transparent url("../../images/foreground.jpg") no-repeat;
+  background-position: 25% bottom;
+  background-size: 190%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5px;
+}
+
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-link__text {
+  display: none;
+  color: var(--gray-text-color);
+  line-height: 140%;
+  font-size: 14px;
+}
+
+.email {
+  display: none;
+  align-items: center;
+  font-size: 14px;
+}
+
+.email__icon {
+  width: 20px;
+  height: 20px;
+  background: transparent url("../../images/mail.svg") center no-repeat;
+  margin-right: 10px;
+}
+
+.logo {
+  height: 32px;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials__link {
+  display: block;
+  width: 32px;
+  height: 30px;
+  margin-right: 10px;
+  background: url("../../images/socials.svg");
+  transition: .2s ease;
+}
+
+.socials__link:hover {
+  filter: brightness(.9);
+}
+
+.socials__link> {
+  margin-right: 10px;
+}
+
+.socials > li:last-child > .socials__link {
+  margin-right: 0;
+}
+
+.socials__link--whatsapp {
+  background-position-y: 0;
+}
+.socials__link--telegram {
+  background-position-y: -30px;
+}
+.socials__link--instagram {
+  background-position-y: -60px;
+}
+
+.phone-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.phone-btn {
+  position: relative;
+  background: transparent url("../../images/phone-btn-bg.svg") center/contain no-repeat;
+  border-radius: 100px;
+  font-size: 14px;
+  width: 135px;
+  height: 40px;
+  transition: .3s ease-out;
+}
+
+.phone-btn:hover {
+  background-color: #FFEDCB40;
+}
+
+.phone-block__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-text__phone {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.phone-text__time {
+  display: none;
+  font-size: 14px;
+}
+
+.landing {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.landing__heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.landing__description {
+  line-height: 150%;
+  max-width: 90%;
+  margin-bottom: 30px;
+}
+
+.head-block__notification {
+  margin-bottom: 160px;
+}
+
+.notification {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.notification__point {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(100.13% 100% at 50.11% 0%, #FFEBC6 0%, #EFAB33 100%);
+  border: 1px solid #F2B852;
+  border-radius: 100px;
+  z-index: 5;
+}
+
+.notification-text {
+  display: flex;
+  position: relative;
+  top: -7px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff80;
+  box-shadow: 0 4px 20px #0000001E;
+  backdrop-filter: blur(20px);
+  padding: 20px 0;
+  font-weight: 700;
+}
+
+.notification-text__text--yellow {
+  color: var(--yellow-text-color);
+}
+
+.landing__action-btn {
+  padding: 15px 64px;
+}
+
+@media (min-width: 414px) {
+  .header {
+    gap: 15px;
+  }
+
+  .socials {
+    width: 35%;
+    justify-content: space-between;
+  }
+
+  .foreground {
+    background-size: 150%;
+  }
+}
+
+@media (min-width: 568px) {
+  .socials {
+    width: 25%;
+  }
+
+  .foreground {
+    background-position: 150% bottom;
+    background-size: 90%;
+  }
+
+  .landing__action-btn {
+    margin-bottom: 10px;
+    padding: 15px 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .phone-block {
+    width: auto;
+    flex-direction: row-reverse;
+    order: 4 !important;
+  }
+
+  .phone-text {
+    margin-right: 10px;
+    text-align: right;
+  }
+
+  .phone-text__phone {
+    color: #EFAB33;
+  }
+
+  .phone-text__time {
+    display: block;
+  }
+
+  .menu-btb {
+    order: 5 !important;
+  }
+
+  .socials {
+    width: 15%;
+  }
+
+  .landing__heading {
+    max-width: 70%;
+  }
+
+  .landing__description {
+    max-width: 60%;
+  }
+
+  .notification {
+    width: 344px;
+    margin-left: 35px;
+  }
+
+  .head-block__notification {
+    margin-bottom: 130px;
+  }
+
+  .landing__action-btn {
+    margin-bottom: 30px;
+  }
+
+  .head-block {
+    background: #ccc url("../../images/mountains-landscape.jpg");
+    background-position-x: 80%;
+  }
+
+  .foreground {
+    background-position: -10% bottom;
+    background-size: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  .email {
+    display: flex;
+  }
+
+  .head-block {
+    gap: 100px;
+  }
+
+  .head-block {
+    background-position-x: 70%;
+  }
+
+  .foreground {
+    background-position: -80% bottom;
+    background-size: 110%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo-link__text {
+    display: block;
+  }
+
+  .logo-link__logo {
+    margin-right: 13px;
+  }
+
+  .socials {
+    width: auto;
+  }
+
+  .socials__link {
+    width: 41px;
+    height: 38px;
+    background-size: cover;
+    margin-right: 5px;
+  }
+
+  .socials__link--whatsapp {
+     background-position-y: 0;
+   }
+  .socials__link--telegram {
+    background-position-y: -38px;
+  }
+  .socials__link--instagram {
+    background-position-y: -76px;
+  }
+
+  .socials > li:last-child > .socials__link {
+    margin-right: 0;
+  }
+
+  .logo {
+    height: 42px;
+  }
+
+  .phone-text__phone {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .phone-block {
+    margin-right: -25px;
+  }
+
+  .phone-btn {
+    height: 50px;
+    width: 140px;
+  }
+
+  .landing__heading {
+    font-size: 38px;
+    max-width: 60%;
+  }
+
+  .landing__description {
+    font-size: 20px;
+    max-width: 55%;
+  }
+
+  .notification {
+    margin-left: calc((100vw - 1170px) / 2);
+  }
+
+  .head-block {
+    background-position-x: 80%;
+  }
+
+  .foreground {
+    background-position: 2000% bottom;
+    background-size: 99%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .foreground {
+    background-position: 120% bottom;
+    background-size: 80%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .head-block {
+    background-size: cover;
+  }
+
+  .foreground {
+    background-position: 80% bottom;
+    background-size: 60%;
+  }
+}
+
+@media (min-width: 2500px) and (orientation: landscape) {
+  .foreground {
+    background-position: 44vw bottom;
+    background-size: 60vh;
+  }
+}
+
+@media (min-width: 2500px) and (orientation: portrait) {
+  .foreground {
+    background-position: 35vh bottom;
+    background-size: 50vw;
+  }
 }

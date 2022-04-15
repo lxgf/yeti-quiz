@@ -1,11 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Oswald:wght@400;700&display=swap');
 
+* {
+  --gray-text-color: #464646;
+  --brown-text-color: #342100;
+  --yellow-text-color: #FABD61;
+
+  --gray-bg-color: #F9F9F9;
+}
+
 body {
-  background: #F9F9F9;
+  background: var(--gray-bg-color);
+  color: var(--gray-text-color);
   font-family: 'Manrope', sans-serif;
 }
 
 .container {
+  margin: 0 15px;
   display: flex;
-  margin: 1rem;
+  flex-direction: column;
+}
+
+.container--top {
+  margin-top: 15px;
+}
+
+.container-bottom {
+  margin-bottom: 100px;
+}
+
+.button {
+  border: 0;
+  cursor: pointer;
+  color: var(--gray-text-color);
+  font-family: 'Manrope', sans-serif;
+}
+
+.heading {
+  line-height: 150%;
+  color: var(--brown-text-color);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+b {
+  font-weight: 700;
+}
+
+.action-btn {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px #00000015;
+  width: 100%;
+  border: 1px solid #F2B852;
+  border-radius: 100px;
+  background: #FFEBC6 radial-gradient(100.13% 100% at 50.11% 0%, #FFEBC6 0%, #EFAB33 100%);
+  box-shadow: 0 4px 20px #FFDAA050, 0 4px 0 #D3A854;
+  transition: .3s ease-out;
+}
+
+.action-btn:hover {
+  filter: brightness(.9);
+}
+
+.action-btn--light {
+  color: #FEFEFE;
+}
+
+.menu-btb {
+  height: 40px;
+  width: 40px;
+  background: #ffffff50 url("../images/burger-btn.svg") no-repeat center;
+  backdrop-filter: blur(20px);
+  transition: .3s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px #00000010;
+}
+
+.menu-btb:hover {
+  box-shadow: 0 4px 10px #c6c6c6;
+}
+
+@media (min-width: 414px) {
+  .container {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .container--top {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 568px) {
+  .action-btn {
+    max-width: 70%;
+    align-self: center;
+  }
+
+  .container {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .container--top {
+    margin-top: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .action-btn {
+    width: 344px;
+    align-self: start;
+  }
+
+
+  .container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .container--top {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1170px;
+  }
+
+  .menu-btb {
+    height: 50px;
+    width: 50px;
+  }
+
+  .action-btn {
+    font-size: 16px;
+  }
 }
