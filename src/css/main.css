@@ -35,6 +35,12 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
+.textarea {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
 .heading {
   line-height: 150%;
   color: var(--brown-text-color);
@@ -54,7 +60,7 @@ b {
   width: 100%;
   border: 1px solid #F2B852;
   border-radius: 100px;
-  background: #FFEBC6 radial-gradient(100.13% 100% at 50.11% 0%, #FFEBC6 0%, #EFAB33 100%);
+  background: #FFEBC6 radial-gradient(100% 100% at 50% 0%, #FFEBC6 0%, #EFAB33 100%);
   box-shadow: 0 4px 20px #FFDAA050, 0 4px 0 #D3A854;
   transition: .3s ease-out;
 }
@@ -65,6 +71,13 @@ b {
 
 .action-btn--light {
   color: #FEFEFE;
+}
+
+.action-btn--dark {
+  color: #FEFEFE;
+  border-color: #546E7D;
+  background: #546E7D radial-gradient(100% 100% at 50% 0%, #7696A8 0%, #3e5765 100%);
+  box-shadow: 0 4px 20px #6477827F, 0 4px 0 #10212B;
 }
 
 .menu-btn {
