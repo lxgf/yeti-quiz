@@ -35,6 +35,10 @@ function displayQuestion(index) {
         const checkboxElem = document.createElement('input')
         checkboxElem.setAttribute('type', 'checkbox')
         checkboxElem.setAttribute('name', `q_${index}`)
+        questionData.required === 'true' ?
+          checkboxElem.setAttribute('required', 'true')
+          :
+          checkboxElem.setAttribute('required', 'false')
         checkboxElem.classList = 'list-item__check-input checkbox'
 
         checkListItem.appendChild(checkboxElem)
@@ -60,6 +64,10 @@ function displayQuestion(index) {
         const radioElem = document.createElement('input')
         radioElem.setAttribute('type', 'radio')
         radioElem.setAttribute('name', `q_${index}`)
+        questionData.required === 'true' ?
+          radioElem.setAttribute('required', 'true')
+          :
+          radioElem.setAttribute('required', 'false')
         radioElem.classList = 'list-item__check-input radio'
 
         checkListItem.appendChild(radioElem)
@@ -77,6 +85,10 @@ function displayQuestion(index) {
      const textAreaElem = document.createElement('textarea')
       textAreaElem.classList = 'text-block__textarea textarea'
       textAreaElem.setAttribute('placeholder', questionData.placeholder)
+      questionData.required === 'true' ?
+        textAreaElem.setAttribute('required', 'true')
+        :
+        textAreaElem.setAttribute('required', 'false')
 
       answersBlock.appendChild(textAreaElem)
       break

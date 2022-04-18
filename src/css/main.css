@@ -14,6 +14,11 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
+::selection {
+  background: var(--yellow-text-color);
+  color: var(--brown-text-color);
+}
+
 .container {
   margin: 0 15px;
   display: flex;
@@ -61,7 +66,7 @@ b {
   border: 1px solid #F2B852;
   border-radius: 100px;
   background: #FFEBC6 radial-gradient(100% 100% at 50% 0%, #FFEBC6 0%, #EFAB33 100%);
-  box-shadow: 0 4px 20px #FFDAA050, 0 4px 0 #D3A854;
+  box-shadow: 0 4px 0 #D3A854;
   transition: .3s ease-out;
 }
 
@@ -77,7 +82,7 @@ b {
   color: #FEFEFE;
   border-color: #546E7D;
   background: #546E7D radial-gradient(100% 100% at 50% 0%, #7696A8 0%, #3e5765 100%);
-  box-shadow: 0 4px 20px #6477827F, 0 4px 0 #10212B;
+  box-shadow: 0 4px 0 #10212B;
 }
 
 .menu-btn {
