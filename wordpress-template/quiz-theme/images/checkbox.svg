@@ -1,0 +1,19 @@
+<svg width="20" height="40" viewBox="0 0 20 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="19" height="19" rx="4.5" stroke="url(#paint0_radial_29_4)"/>
+<rect x="0.5" y="20.5" width="19" height="19" rx="4.5" fill="url(#paint1_linear_29_4)" stroke="url(#paint2_radial_29_4)"/>
+<defs>
+<radialGradient id="paint0_radial_29_4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.031) rotate(90) scale(20 20.0252)">
+<stop stop-color="#FFEDCB"/>
+<stop offset="1" stop-color="#FABC5F"/>
+</radialGradient>
+<linearGradient id="paint1_linear_29_4" x1="4.25" y1="37.75" x2="17.5" y2="24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEA054"/>
+<stop offset="0.502762" stop-color="#D64763"/>
+<stop offset="1" stop-color="#B62A99"/>
+</linearGradient>
+<radialGradient id="paint2_radial_29_4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.031 20) rotate(90) scale(20 20.0252)">
+<stop stop-color="#FFEDCB"/>
+<stop offset="1" stop-color="#FABC5F"/>
+</radialGradient>
+</defs>
+</svg>
